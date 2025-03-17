@@ -2,7 +2,7 @@ import { View, Text, TextInput, TouchableOpacity, ActivityIndicator, Alert, Styl
 import { useState } from 'react';
 import { router } from 'expo-router';
 import axios from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const { width, height } = Dimensions.get("window");
 
@@ -19,18 +19,18 @@ export default function LoginScreen() {
         }
 
         setLoading(true);
-        setError(""); // Clear previous errors
+        setError("");
 
         try {
             const response = await axios.post("http://localhost:5000/login", { email, password });
 
             if (response.data.status === "Admin") {
-                router.replace('/adminPage'); // Redirect to admin page if admin logs in
+                router.replace('/adminPage');
             } else if (response.data.status === "Success") {
                 await AsyncStorage.setItem('userEmail', email);
-                router.replace('/home'); // Redirect to home after login
+                router.replace('/home');
             } else {
-                setError(response.data.message); // Show backend error
+                setError(response.data.message);
             }
         } catch (error) {
             console.error(error);
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#e8f4f8', // Light gradient background for a modern feel
+        backgroundColor: '#e8f4f8',
         paddingHorizontal: width * 0.05,
     },
     form: {
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     button: {
         width: '100%',
         paddingVertical: height * 0.015,
-        backgroundColor: '#4CAF50', // Modern green button
+        backgroundColor: '#4CAF50',
         borderRadius: 10,
         marginBottom: height * 0.02,
         alignItems: 'center',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     },
     register: {
         fontSize: height * 0.02,
-        color: '#4CAF50', // Green color for the "Register" text
+        color: '#4CAF50',
         fontWeight: 'bold',
         textAlign: 'center',
     }

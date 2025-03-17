@@ -78,16 +78,14 @@ app.put('/products/update/:id', async (req, res) => {
 });
 
 
-// Existing login and register routes
+
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
-  // Hardcoded admin credentials
   const adminEmail = "admin@example.com";
   const adminPassword = "adminpassword";
 
   try {
-    // Check if the credentials match the hardcoded admin credentials
     if (email === adminEmail && password === adminPassword) {
       return res.json({ status: 'Admin' });
     }
@@ -113,13 +111,10 @@ app.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
-    // Check if user already exists
     const existingUser = await EmployeeModel.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: 'User already exists' });
     }
-
-    // Create new user
     const newUser = new EmployeeModel({ email, password });
     await newUser.save();
 

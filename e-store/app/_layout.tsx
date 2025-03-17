@@ -3,7 +3,7 @@ import { Slot, router } from "expo-router";
 
 export default function RootLayout() {
     useEffect(() => {
-        router.replace("/login"); // Redirect to login
+        router.replace("/login");
     }, []);
 
     return <Slot />;

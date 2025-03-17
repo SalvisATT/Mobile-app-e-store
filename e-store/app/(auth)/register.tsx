@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#e8f4f8', // Light background for a modern feel
+        backgroundColor: '#e8f4f8',
         paddingHorizontal: width * 0.05,
     },
     form: {
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     button: {
         width: '100%',
         paddingVertical: height * 0.015,
-        backgroundColor: '#4CAF50', // Modern green button
+        backgroundColor: '#4CAF50',
         borderRadius: 10,
         marginBottom: height * 0.02,
         alignItems: 'center',
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     },
     loginLink: {
         fontSize: height * 0.02,
-        color: '#4CAF50', // Green for the login link
+        color: '#4CAF50',
         fontWeight: 'bold',
         textAlign: 'center',
     }

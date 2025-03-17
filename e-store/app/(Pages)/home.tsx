@@ -11,7 +11,6 @@ function Store() {
     return (
         <View style={styles.container}>
             <NavigationBar setCurrentPage={setCurrentPage} />
-            {/* Conditionally render StorePage or CatalogPage */}
             {currentPage === "store" ? (
                 <View style={styles.storeContainer}>
                     <StorePage />
@@ -31,14 +30,14 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "100%",
         height: "100%",
-        justifyContent: 'flex-start', // Align items at the top of the screen
-        alignItems: 'center',         // Center horizontally
-        backgroundColor: '#F9E3C2',  // Optional, to match your vintage skin tone style
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        backgroundColor: '#F9E3C2',
         overflowY: 'scroll',
     },
     storeContainer: {
         width: "80%",
-        height: "100%", // Ensure StorePage takes up 80% of the height
+        height: "100%",
     },
 });
 

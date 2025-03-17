@@ -102,19 +102,19 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     flexDirection: "row",
-    height: 150, // Reduced height for better mobile fitting
-    width: "100%", // Takes full screen width
+    height: 150,
+    width: "100%",
     marginBottom: 20,
     borderRadius: 10,
     overflow: "hidden",
-    justifyContent: "center", // Centers images
+    justifyContent: "center", 
   },
   headerImage: {
-    width: 200, // Reduced width for smaller screens
+    width: 200,
     height: "100%",
     resizeMode: "cover",
     borderRadius: 10,
-    marginHorizontal: 5, // Reduced margin for better spacing
+    marginHorizontal: 5,
   },
   title: {
     fontSize: 24,

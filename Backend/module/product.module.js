@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     price: {
-      type: Number, // Use Decimal128 to store decimals
+      type: Number,
       required: true,
     },
     image: {

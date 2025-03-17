@@ -5,7 +5,7 @@ const EmployeeSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,  // Prevent duplicate emails
+      unique: true,
     },
     password: {
       type: String,
