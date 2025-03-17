@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "93eb80cc-3acc-4e49-af59-51d444619fb8"
+      }
+    },
+    "android": {
+      "package": "com.salvis.attikis.simpleexpoapp"
+    }
+  }
+}
